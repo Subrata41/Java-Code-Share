@@ -1,0 +1,13 @@
+//Alphabet or Character
+import java.util.*;
+public class MyClass {
+    public static void main(String args[]) {
+       Scanner sc = new Scanner(System.in);
+       char n = sc.next().charAt(0);
+       if(('A'<= n && 'Z' >= n) || ('a'<= n && 'z' >= n)){
+           System.out.print("Yes");
+       }
+       else
+           System.out.print("No");
+}
+}

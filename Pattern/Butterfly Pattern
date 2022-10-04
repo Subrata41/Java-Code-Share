@@ -1,5 +1,16 @@
 //Write a java program to print butterfly pattern where number of rows is given by user.
 
+*        *
+**      **
+***    ***
+****  ****
+**********
+****  ****
+***    ***
+**      **
+*        *
+
+
 import java.util.*;
 public class MyClass{
     public static void main(String[] args){

@@ -1,0 +1,41 @@
+import java.util.*;
+import java.lang.*;
+
+public class MyClass {
+    public static void main(String args[]) {
+      Scanner sc= new Scanner(System.in);
+      int n=sc.nextInt();
+      int m=sc.nextInt();
+      int[][] matrix=new int[n][m];
+      for(int i=0; i<n; i++){
+          for(int j=0; j<m; j++){
+              matrix[i][j]=sc.nextInt();
+          }
+      }
+      int rowStart=0;
+      int rowEnd=n-1;
+      int colStart=0;
+      int colEnd=m-1;
+      
+      while(rowStart<=rowEnd && colStart<=colEnd){
+            for(int l=colStart; l<=colEnd; l++){
+                  System.out.print(matrix[rowStart][l]+" ");
+            }
+            rowStart++;
+            for(int k=rowStart; k<=rowEnd; k++){
+                System.out.print(matrix[k][colEnd]+" ");
+            }
+            colEnd--;
+            for(int l=colEnd; l>=colStart; l--){
+                  System.out.print(matrix[rowEnd][l]+" ");
+            }
+            rowEnd--;
+            for(int k=rowEnd; k>=rowStart; k--){
+                System.out.print(matrix[k][colStart]+" ");
+            }
+            colStart++;
+            System.out.println();
+            
+      }
+    }
+}

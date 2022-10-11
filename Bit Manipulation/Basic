@@ -1,0 +1,32 @@
+import java.util.*;
+public class MyClass {
+    public static void main(String args[]) {
+      Scanner sc = new Scanner(System.in);
+    //   Get Bit
+      int n=sc.nextInt();
+      int bitMask=1<<2;
+      if((bitMask & n)==0){
+          System.out.println("Zero");
+    }
+    else{
+        System.out.println("One");
+    }
+    // Set Bit
+    int m=sc.nextInt();
+    int bitMask1=1<<1;
+    int number=bitMask1 | n;
+    System.out.println(number);
+    
+    // Clear Bit
+    int l=sc.nextInt();
+    int bitmask2=1<<2;
+    int NotBit=~bitMask;
+    int newNumber=NotBit & l;
+    System.out.println(newNumber);
+    /* 
+    Update Bit
+      For 0 -> CLEAR Bit
+      For 1 -> SET bit 
+    */
+}
+}

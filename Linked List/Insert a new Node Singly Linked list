@@ -1,0 +1,51 @@
+Output- 
+list -> is -> a -> null
+Code-
+public class LL {
+ 
+   Node head;
+ 
+   public class Node {
+       String data;
+       Node next;
+ 
+       Node(String data) {
+           this.data = data;
+           this.next = null;
+       }
+   }
+ 
+   public void addFirst(String data) {
+       Node newNode = new Node(data);
+        if(head == null) {
+           head = newNode;
+           return;
+       }
+       newNode.next = head;
+       head = newNode;
+   }
+ 
+   public void printList() {
+       Node currNode = head;
+       if(head==null){
+           System.out.print("List is empty");
+       }
+ 
+       while(currNode != null) {
+           System.out.print(currNode.data+" -> ");
+           currNode = currNode.next;
+       }
+ 
+       System.out.println("null");
+   }
+ 
+ 
+   public static void main(String args[]) {
+       LL list = new LL();
+       list.addFirst("a");
+       list.addFirst("is");
+       list.addFirst("list");
+       list.printList();
+       
+   }
+}
